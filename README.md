@@ -1,70 +1,57 @@
-# Getting Started with Create React App
+# Consumindo API com Axios + Node.js na Vercel
+## Objetivo deste código 🎯
+Demonstrar como consumir uma API utilizando o **Axios** e hospedando na **Vercel**. 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## O que vamos usar. 🧰
+- Node.js 
+- Axios 
+- Vercel
+- Endpoint / API  
 
-## Available Scripts
 
-In the project directory, you can run:
+## Configurando Ambiente Local 📗
+ Instale o **Node.Js** (caso não tenha, acesse o site do Node.js https://nodejs.org/en/, baixe a versão LTS, e instale. Next, next, next...), instale os seguintes pacotes utilizando seu terminal:
 
-### `yarn start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+* **Axios** : Cliente **HTTP** assíncrono e baseado em *promisses*. Seu trabalho é facilitar as solicitações HTTP dos *verbos* CRUD, que serão feitas as rotas ou *endpoints*.<br> <br>
+`npm install --save axios`<br> <br>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+* **API** : Fonte de dados que serão exibidos na tela. Utilizaremos uma API ou endpoint ficitícia: APIs *fake*, foram criadas para testarmos nossas aplicações. Existem diversas, iremos utilizar como exemplo uma API que nos retorna dados da serie de filmes *Stars Wars*. 🛸<br> <br>
+https://swapi.dev/<br> <br>
 
-### `yarn test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `yarn build`
+>Dica : A flag `--save` significa que este pacote ficará regitrado no package.json.<br>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<br>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Configurando Ambiente no Backend - Vercel 📕
+Antes, clone esta aplicação para seu repositório no Github, pois a Vercel irá identificar seus repositórios automaticamente no Git e sugerir que seu novo projeto (hospedagem) seja feito apartir do repositório que você escolher no Github, e com 1 clique sua aplicação já estará rodando em produrção com **segurança e certificado digital** 🤯. Prático não?<br><br>
+Se você não conhce a Vercel, esta é a sua oportunidade. A Vercel é simplismente **magnifica**!! Rode aplicações **SSR (Server Side Rending)** com alta performance gratuitamente. E se precisar escalar, ela está pronta para isso com custo acessível. **Então vamos lá!**<br><br>
+Acesse >> www.vercel.com <br><br>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Se ja tiver conta, faça o login, se não tiver, crie sua conta, é gratuita. Após isso em seu *"Dashboard"*, clique em *"New Project"*, selecione de onde quer importar seus repositórios. Escolha Github, autorize a comunicação da Vercel com a API da *Github*. Em seguida serão listados todas suas dependências no Github. Escolha este projeto que você clonou, clique em *"Import"*, clique em *"Select"* em sua conta, dê um nome para seu projeto, e finalize clicando em *"Deploy"*. <br> irá aparecer uma mensagem: *"Congratulations! Your project has been successfully deployed"*.<br><br>
+Pronto, tá no ar. Clique em *"Visit"* e veja sua aplicação novinha!
 
-### `yarn eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Testando Aplicação 🕹
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Se você clonou o repositório, digite no seu terminal o comando: <br> <br>
+`npm start` ou `yarn start` <br><br>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Acesse em seu navegador o localhost, e divirta-se!<br> 
+http://localhost:3000/<br>
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Se já enviou seu projeto para Vercel, basta acessar o link fornecido pela Vercel, e ver sua aplicação rodando. <br><br>
+No meu caso, o link é este abaixo. Veja essa aplicação funcionando, clicando nele. <br> <br>
+https://api-node-axios-react-vercel-2.vercel.app/<br>
+## Conclusão 🏆
+Com poucas ferramentas, porém poderosas, podemos criar aplicações dinâmicas, com comportamento estático e de alto desempenho, graças o **SSR** servido pela **Vercel**. Já em nossa saga do *Star Wars*, podemos ver de forma randômica, os resultados da API utilizada, separadas por paginação. Em nosso código seguimos as boas práticas no tratamento de erros com *try/catch*, e não bloquemos o fluxo síncrono do código, utilizando o *async/await* (simplificação de uma promisse / callback) em *background*, permitindo que toda aplicação seja fluída e rápida.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Dica 📌
+Na vercel, é possivel adicionar seu domínio personalizado (de qualquer TLD) adiquirido em qualquer lugar. Deixando sua aplicação perfeita. 😉 <br><br>
+←[Voltar para lista anterior](https://github.com/ricardaonao/APIs)
+____________________________________________________________________
+Autoria: Ricardo Souza 
