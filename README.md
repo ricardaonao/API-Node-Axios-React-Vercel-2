@@ -46,7 +46,7 @@ Se já enviou seu projeto para Vercel, basta acessar o link fornecido pela Verce
 No meu caso, o link é este abaixo. Veja essa aplicação funcionando, clicando nele. <br> <br>
 https://api-node-axios-react-vercel-2.vercel.app/<br>
 ## Conclusão 🏆
-Com poucas ferramentas, porém poderosas, podemos criar aplicações dinâmicas, com comportamento estático e de alto desempenho, graças o **SSR** servido pela **Vercel**. Já em nossa saga do *Star Wars*, podemos ver de forma randômica, os resultados da API utilizada, separadas por paginação. Em nosso código seguimos as boas práticas no tratamento de erros com *try/catch*, e não bloquemos o fluxo síncrono do código, utilizando o *async/await* (simplificação de uma promisse / callback) em *background*, permitindo que toda aplicação seja fluída e rápida.
+Com poucas ferramentas, porém poderosas, podemos criar aplicações dinâmicas, resposivas, com comportamento estático e de alto desempenho, graças o **SSR** servido pela **Vercel**. Já em nossa saga do *Star Wars*, podemos ver de forma randômica, os resultados da API utilizada. Em nosso código seguimos as boas práticas, e não bloquemos o fluxo síncrono do código, utilizando as *promisses* com *.then*, permitindo que toda aplicação seja fluída e rápida, dependendo apenas da resposta do servidor. **Viva ao Node.js!**
 
 
 
